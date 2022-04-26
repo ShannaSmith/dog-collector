@@ -4,7 +4,8 @@
 <h1>Dog List</h1>
 
 {% for dog in dogs %}
-  <div class="card">
+<a href="/dogs/{{ dog.id }}"></a>
+  <div class="card-content">
     <div class="card-content">
       <span class="card-title">{{ dog.name }}</span>
       <p>Breed: {{ dog.breed }}</p>

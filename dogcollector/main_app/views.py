@@ -9,9 +9,9 @@ def home(request):
   return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟ\ﾉ</h1>')
 def about(request):
     return  render(request, 'about.html')
-def dogs_index(request):
+def dogs_index(request): #using our model to get all the rows in our dog table in psql
     dogs = Dog.objects.all()
     return render(request, 'dogs/index.html', {'dogs': dogs})
-def dog_detail(request, dog_id): # path('cats/<int:cat_id>/') - this is where dog_id comes from
+def dogs_detail(request, dog_id): # path('cats/<int:cat_id>/') - this is where dog_id comes from
     dog = Dog.objects.get(id=dog_id)
-    return render(request, 'dog/detail.html', {'dog': dog})
+    return render(request, 'dogs/detail.html', {'dog': dog})
