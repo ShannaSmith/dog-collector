@@ -1,6 +1,7 @@
 #from xml.dom import domreg
 from django.shortcuts import render
-from.models import Dog
+from django.views.generic.edit import CreateView
+from .models import Dog
 # Create your views here.
 from django.http import HttpResponse
 
@@ -15,3 +16,8 @@ def dogs_index(request):
 def dogs_detail(request, dog_id): # path('dogs/<int:dog_id>/') - this is where dog_id comes from
     dog = Dog.objects.get(id=dog_id)
     return render(request, 'dogs/detail.html', {'dog': dog})
+
+class DogCreate(CreateView):
+    model = Dog
+    fields = '__all__'
+    
