@@ -1,16 +1,8 @@
 #from xml.dom import domreg
 from django.shortcuts import render
-from .models import Dog
+from.models import Dog
 # Create your views here.
 from django.http import HttpResponse
-#Add the dog class & list and view function below the imports
-class Dog:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, name, breed, description, age):
-    self.name = name
-    self.breed = breed
-    self.description = description
-    self.age = age
-
 
 # Define the home view
 def home(request):
@@ -20,3 +12,6 @@ def about(request):
 def dogs_index(request):
     dogs = Dog.objects.all()
     return render(request, 'dogs/index.html', {'dogs': dogs})
+def dog_detail(request, dog_id): # path('cats/<int:cat_id>/') - this is where dog_id comes from
+    dog = Dog.objects.get(id=dog_id)
+    return render(request, 'dog/detail.html', {'dog': dog})
