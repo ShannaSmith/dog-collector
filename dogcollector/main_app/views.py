@@ -3,6 +3,7 @@ from django.shortcuts import render
 #import the Class based views 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dog # importing my model
+from .forms import ExerciseForm #importing my exercise  to instantiate it
 # Create your views here.
 from django.http import HttpResponse
 
@@ -28,5 +29,8 @@ def dogs_index(request):
     return render(request, 'dogs/index.html', {'dogs': dogs})
 def dogs_detail(request, dog_id): # path('dogs/<int:dog_id>/') - this is where dog_id comes from
     dog = Dog.objects.get(id=dog_id)
-    return render(request, 'dogs/detail.html', {'dog': dog})
+    #instantiate ExerciseForm to be rendered in the template
+    exercise_form = ExerciseForm()
+    #include the dog and exercise_form in the context
+    return render(request, 'dogs/detail.html', {'dog': dog, 'exercise_form': exercise_form})
 
