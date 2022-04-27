@@ -2,7 +2,8 @@
 from django.shortcuts import render, redirect
 # import the Class based views
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Dog  # importing my model
+from django.views.generic import ListView, DetailView
+from .models import Dog, Toy # importing my model
 from .forms import ExerciseForm  # importing my exercise  to instantiate it
 # Create your views here.
 from django.http import HttpResponse
@@ -60,4 +61,22 @@ def add_exercise(request, dog_id):
         new_exercise.save()
     return redirect('detail', dog_id=dog_id)
 
+    
+class ToyList(ListView):
+  model = Toy
+
+class ToyDetail(DetailView):
+  model = Toy
+
+class ToyCreate(CreateView):
+  model = Toy
+  fields = '__all__'
+
+class ToyUpdate(UpdateView):
+  model = Toy
+  fields = ['name', 'color']
+
+class ToyDelete(DeleteView):
+  model = Toy
+  success_url = '/toys/'
    
