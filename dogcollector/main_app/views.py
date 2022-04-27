@@ -1,7 +1,8 @@
 #from xml.dom import domreg
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
-from .models import Dog
+#import the Class based views 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Dog # importing my model
 # Create your views here.
 from django.http import HttpResponse
 
@@ -20,4 +21,12 @@ def dogs_detail(request, dog_id): # path('dogs/<int:dog_id>/') - this is where d
 class DogCreate(CreateView):
     model = Dog
     fields = '__all__'
+class DogUpdsate(UpdateView):
+    model = Dog
+    # disallow the renaming of a dog by excluding the name field
+    fields = ['breed', 'description', 'age']
+    
+class DogDelete(DeleteView):
+    model = Dog
+    success_url = '/cats/'
     
