@@ -30,4 +30,7 @@ class Exercise(models.Model):
     def __str__(self):
         # method for obtaining the friendly value of a Field.choice
         return f"{self.get_outting_display()} on {self.date}"
+    # change the default sort
+class Meta:
+    ordering = ['-date']
     
