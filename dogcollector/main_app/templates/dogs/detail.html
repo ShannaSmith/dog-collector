@@ -48,9 +48,9 @@
 	<hr>
 	<div class="row">
 	  <div class="col s6">
-		<h3>{{ cat.name }}'s Toys</h3>
-		{% if cat.toys.count %}
-		  {% for toy in cat.toys.all %}
+		<h3>{{ dog.name }}'s Toys</h3>
+		{% if dog.toys.count %}
+		  {% for toy in dog.toys.all %}
 			<div class="card">
 			  <div class="card-content">
 				<span class="card-title">
@@ -71,11 +71,11 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">
-              A <span style="color: {{ toy.color }}">{{ toy.color }}</span> {{ toy.name }}
+              A <span style="color: {{toy.color }}">{{ toy.color }}</span> {{ toy.name }}
             </span>
           </div>
           <div class="card-action">
-            <form action="{% url 'assoc_toy' cat.id toy.id %}" method="post">
+            <form action="{% url 'assoc_toy' dog.id toy.id %}" method="post">
               {% csrf_token %}
               <button type="submit" class="btn">Add</button>
             </form>
@@ -83,7 +83,7 @@
         </div>
       {% endfor %}
     {% else %}
-      <h5>{{cat.name}} Already Has All Toys Available</h5>
+      <h5>{{dog.name}} Already Has All Toys Available</h5>
     {% endif %}
   </div>
 	</div>

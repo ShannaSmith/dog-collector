@@ -17,7 +17,7 @@ class DogCreate(CreateView):
 class DogUpdate(UpdateView):
     model = Dog
     # disallow the renaming of a dog by excluding the name field
-    fields = ['breed', 'description', 'age']
+    fields = ['breed', 'description', 'age', 'toy']
 
 
 class DogDelete(DeleteView):
@@ -42,10 +42,16 @@ def dogs_index(request):
 
 def dogs_detail(request, dog_id):  # path('dogs/<int:dog_id>/') - this is where dog_id comes from
     dog = Dog.objects.get(id=dog_id)
+    #Get the Toys the dog doesn't have
+    toys_dog_doesnt_have = Toy.objects.exclude(id__in = dog.toys.all().values_list('id'))
      # instantiate ExerciseForm to be rendered in the template
     exercise_form = ExerciseForm()
     # include the dog and exercise_form in the context
-    return render(request, 'dogs/detail.html', {'dog': dog, 'exercise_form': exercise_form})
+    return render(request, 'dogs/detail.html', {'dog': dog, 'exercise_form': exercise_form,
+    #Add the toys to be displayed
+    'toys': toys_dog_doesnt_have
+    })
+    
 
 
 
@@ -61,6 +67,10 @@ def add_exercise(request, dog_id):
         new_exercise.save()
     return redirect('detail', dog_id=dog_id)
 
+def assoc_toy(request, dog_id, toy_id):
+  # Note: you can pass a toy's id instead of the whole object
+  Dog.objects.get(id=dog_id).toys.add(toy_id)
+  return redirect('detail', dog_id=dog_id)
     
 class ToyList(ListView):
   model = Toy
