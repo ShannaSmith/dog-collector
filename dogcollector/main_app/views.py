@@ -13,7 +13,7 @@ class DogCreate(CreateView):
     model = Dog
     fields = '__all__'
 
-git
+
 class DogUpdate(UpdateView):
     model = Dog
     # disallow the renaming of a dog by excluding the name field
