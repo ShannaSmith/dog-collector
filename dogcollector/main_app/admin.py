@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Dog, Exercise
+from .models import Dog, Exercise, Toy
 # Register  models here.
 admin.site.register(Dog) #allow crud updates for our dog table in our admin app
 admin.site.register(Exercise)
