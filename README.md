@@ -17,7 +17,7 @@ To build a full-stack CRUD application using the Django Stack.
 * Use Django's ManyToManyField to implement a M:M relationship
 * Add an Association in a M:M relationship
  <br>
-![app Image](https://imgur.com/cqaeIcL")
+![app Image](https://imgur.com/cqaeIcL)
 <br>
 ## 🔑 Key Features
 *Create and maintain an index of dogs
