@@ -11,13 +11,13 @@ from django.http import HttpResponse
 
 class DogCreate(CreateView):
     model = Dog
-    fields = '__all__'
+    fields = ['breed', 'description', 'age']
 
 
 class DogUpdate(UpdateView):
     model = Dog
     # disallow the renaming of a dog by excluding the name field
-    fields = ['breed', 'description', 'age', 'toy']
+    fields = ['breed', 'description', 'age']
 
 
 class DogDelete(DeleteView):
