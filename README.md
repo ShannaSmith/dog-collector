@@ -19,6 +19,7 @@ To build a full-stack CRUD application using the Django Stack.
  <br>
 <a href="https://imgur.com/cqaeIcL"><img src="https://i.imgur.com/cqaeIcL.png" title="source: imgur.com" /></a>
 <br>
+
 ##  🔑 Key Features
 
 *Create and maintain an index of dogs
