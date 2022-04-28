@@ -4,7 +4,7 @@ Dog-Collector catalogs all the dogs cared for by your rescue organization or you
 To build a full-stack CRUD application using the Django Stack.
 * Define a Django Model for a data entity
 * Generate migrations when Models are added or updated
-* run pending migrations
+* Run pending migrations
 * Implement a Details page for a single model instance
 * Use Class-based Views (CBVs) in place of view functions
 * Use a CBV to create date, delete data, and update data
@@ -22,10 +22,9 @@ To build a full-stack CRUD application using the Django Stack.
 <br>
 
 ## 🔑 Key Features
-
-*Create and maintain an index of dogs
-*Create and maintain a list of dog toys
-*Create and maintain a exercise record for each dog
+* Create and maintain an index of dogs
+* Create and maintain a list of dog toys
+* Create and maintain a exercise record for each dog
 
 ## 💻 Technologies Used
 <h3 align="center">Django | Python3 | Materialize | JavaScript | CSS | HTML</h3>
