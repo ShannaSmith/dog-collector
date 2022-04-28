@@ -18,9 +18,12 @@ To build a full-stack CRUD application using the Django Stack.
 * Add an Association in a M:M relationship
  <br>
 ![app Image](https://i.imgur.com/cqaeIcL.png)
-## 🔑 Key Features
+<br>
+##  🔑 Key Features
+
 *Create and maintain an index of dogs
 *Create and maintain a list of dog toys
 *Create and maintain a exercise record for each dog
+
 ## 💻 Technologies Used
 Django | Python3 | Materialize | JavaScript | CSS | HTML
