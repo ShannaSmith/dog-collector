@@ -17,7 +17,7 @@ To build a full-stack CRUD application using the Django Stack.
 * Use Django's ManyToManyField to implement a M:M relationship
 * Add an Association in a M:M relationship
  <br>
-![app Image](https://i.imgur.com/cqaeIcL.png)
+![app image[(https://i.imgur.com/cqaeIcL.png)
 <br>
 ##  🔑 Key Features
 
@@ -26,4 +26,4 @@ To build a full-stack CRUD application using the Django Stack.
 *Create and maintain a exercise record for each dog
 
 ## 💻 Technologies Used
-Django | Python3 | Materialize | JavaScript | CSS | HTML
+<h3 align="center">Django | Python3 | Materialize | JavaScript | CSS | HTML</h3>
