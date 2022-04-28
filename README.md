@@ -1,4 +1,4 @@
-# 🐕 dog-collector 🐶
+# 🐕 Dog-Collector 🐶
 Dog-Collector catalogs all the dogs cared for by your rescue organization or yourself. To ensure the dogs are leading interesting and fulfilling lives, this web app tracks each dogs exercise and toys.  The application tracks the type of exercise the dog did; walk, hike, or romp at the dog park. The dog's toys are cataloged to allow for a variety of stimulating activity. Personal information about each caniine is cataloged to allow continuity of care by all. 
 ## :guide_dog: Objective
 To build a full-stack CRUD application using the Django Stack.
@@ -18,6 +18,7 @@ To build a full-stack CRUD application using the Django Stack.
 * Add an Association in a M:M relationship
  <br>
 ![My Image](<a href="https://imgur.com/cqaeIcL"><img src="https://i.imgur.com/cqaeIcL.png" title="source: imgur.com" /></a>)
+<br>
 ## 🔑 Key Features
 *Create and maintain an index of dogs
 *Create and maintain a list of dog toys
