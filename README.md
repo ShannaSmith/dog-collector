@@ -21,7 +21,6 @@ To build a full-stack CRUD application using the Django Stack.
 <br>
 
 ##  🔑 Key Features
-
 *Create and maintain an index of dogs
 *Create and maintain a list of dog toys
 *Create and maintain a exercise record for each dog
